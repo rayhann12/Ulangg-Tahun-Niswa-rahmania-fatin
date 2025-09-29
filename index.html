@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun, Niswa Rahmania Fatin!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
+      color: #f9f9f9;
+    }
+
+    .heart {
+      font-size: 2.5em;
+      animation: pulse 1.5s infinite;
+      color: red;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .button-surprise {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: #555;
+      transition: background-color 0.3s;
+    }
+
+    .button-surprise:hover {
+      background-color: #ffd1dc;
+    }
+
+    .surprise {
+      display: none;
+      margin-top: 40px;
+      animation: fadeIn 1s ease-in-out forwards;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .gallery {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #eee;
+    }
+
+    /* Bintang */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: twinkle 2s infinite ease-in-out alternate;
+      opacity: 0.8;
+      border-radius: 50%;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Efek bintang -->
+  <div class="stars" id="stars"></div>
+
+ 
+
+<audio id="bg-music" loop>
+  <source src="happy-birthday-357371.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung audio.
+</audio>
+
+<script>
+  function playMusic() {
+    const music = document.getElementById("bg-music");
+    music.play();
+  }
+</script>
+
+
+  <h1>Selamat Ulang Tahun, Niswa Rahmania Fatin! 🎂</h1>
+  <div class="heart">❤️</div>
+  <p>Hari ini, 16 Juni 2025, kamu genap berusia 22 tahun. Walaupun kita LDR, aku ingin kamu tahu kalau setiap detik aku selalu mikirin kamu. Kamu kuat, kamu lembut, dan kamu luar biasa. Semoga kebahagiaan selalu menyertaimu, dan setiap impianmu segera terwujud. Aku bangga jadi bagian dari hidupmu.</p>
+
+  <!-- Tombol kejutan + musik -->
+<button class="button-surprise" onclick="playMusic(); document.querySelector('.surprise').style.display='block'">
+  Klik untuk lihat kejutan 🎁
+</button>
+
+  <div class="surprise">
+    <p>🎉 Niswa Rahmania Fatin sayang, kamu adalah semangat dalam hari-hariku. Aku bersyukur banget bisa mengenalmu. Terima kasih karena sudah bertahan sejauh ini, mencintaiku dengan sabar. Aku rindu, dan aku janji, suatu hari kita akan rayain hari-hari spesial ini bareng. Aku cinta kamu. 💕</p>
+  </div>
+
+  <div class="gallery">
+    <img src="/fatin r.jpg" alt="love">
+    <img src="/R15.jpg" alt="couple">
+    <img src="/r14.jpg" alt="birthday">
+    <img src="/r8.jpg" alt="romantic">
+  </div>
+
+  <footer>
+    Dibuat khusus untuk Niswa Rahmania Fatin, dari seseorang yang terus mencintaimu di setiap jarak dan waktu 🌙
+  </footer>
+
+  <script>
+    // Script bintang dinamis
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 150; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
